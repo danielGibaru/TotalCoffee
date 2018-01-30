@@ -2,15 +2,23 @@
 
   "manifest_version": 2,
   "name": "TotalCoffee",
-  "version": "0.1",
+  "version": "1.0",
 
-  "description": "Compte le nombre de café que tu  peux boire par jour",
+  "description": "Plugin compteur de café qu'on bois par jours.",
 
   "icons": {
-    "48": "icons/border-48.png"
+    "48": "icons/icon48.png"
   },
+  "permissions": [
+  "activeTab"
+  ],
 
-  "content_scripts": [
+  "browser_action": {
+    "default_icon": "icons/icon48.png",
+    "default_title": "TotalCoffee",
+    "default_popup": "popup/comtCoffee.html"
+  },
+    "content_scripts": [
     {
       "matches": ["*://*.mozilla.org/*"],
       "js": ["TotalCoffee.js"]
