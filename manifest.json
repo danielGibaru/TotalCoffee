@@ -1,0 +1,20 @@
+{
+
+  "manifest_version": 2,
+  "name": "TotalCoffee",
+  "version": "0.1",
+
+  "description": "Compte le nombre de café que tu  peux boire par jour",
+
+  "icons": {
+    "48": "icons/border-48.png"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://*.mozilla.org/*"],
+      "js": ["TotalCoffee.js"]
+    }
+  ]
+
+}
